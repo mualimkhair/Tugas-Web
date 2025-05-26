@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PESONA TRIP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+      .hero {
+        background-image: url("./assets/plane.jpg"); /* Ganti dengan gambar pesawatmu */
+        background-size: cover;
+        background-position: center;
+        padding: 100px 50px;
+        position: relative;
+        color: #fff;
+        height: 620px;
+        border-radius: 0px 0px 20px 20px;
+      }
+
+      .hero-content {
+        max-width: 600px;
+        padding: 30px;
+        border-radius: 20px;
+        color: #000;
+      }
+
+      .info-box {
+        position: absolute;
+        bottom: -40px;
+        color: #000;
+        padding: 20px 40px;
+        border-radius: 20px;
+        box-shadow: #000;
+      }
+
+      .btn-primary {
+        border-radius: 30px;
+      }
+
+      .hero .btn i {
+        margin-left: 8px;
+      }
+
+      .carousel-item img {
+        max-height: 500px;
+        object-fit: cover;
+      }
+
+      .highlight {
+        color: #c79a3a; /* Warna emas */
+      }
+
+      .property-card {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .property-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .property-price {
+        position: absolute;
+        width: 500px;
+        bottom: 20px;
+        background-color: white;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        font-weight: bold;
+      }
+
+      .property-details span {
+        display: inline-block;
+        margin-right: 15px;
+        font-size: 14px;
+      }
+
+      .img-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .img-grid img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        height: 100%;
+      }
+
+      .property-card {
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s;
+      }
+      .property-card:hover {
+        transform: scale(1.05);
+      }
+      .property-info {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 15px;
+        border-radius: 0 0 10px 10px;
+      }
+      .header {
+        text-align: center;
+        margin: 40px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="" style="min-height: 100vh">
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand-lg bg-light sticky-top">
+        <div class="d-flex mx-5 justify-content-end w-100">
+          <!-- Logo -->
+          <a class="navbar-brand" href="#">
+            <img src="./assets/pic2.png" width="36" alt="Logo" />
+          </a>
+
+          <!-- Toggler for mobile -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Menu di tengah -->
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#beranda">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#galeri">Galeri</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#tentang">Tentang</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#showcase">Showcase</a>
+              </li>
+            </ul>
+
+            <!-- Tombol kanan -->
+            <div class="d-flex align-items-center">
+              <a type="button" class="btn btn-outline-dark me-2 rounded-pill" href="./login.html">Login</a>
+              <button type="button" class="btn btn-primary rounded-pill">Sign up for free</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Navbar End -->
+
+      <!-- Hero Section Start -->
+      <section class="mx-5 rounded-pill mb-5" id="beranda">
+        <div class="hero">
+          <div class="hero-content">
+            <p class="text-uppercase small mb-2">Search & book your tour</p>
+            <h1 class="display-5 fw-bold">
+              Experience <br />
+              The Magic Of <br />
+              Flight!
+            </h1>
+            <a href="#" class="btn btn-primary mt-4 px-4 py-2"> Get Started <i class="bi bi-arrow-right-circle"></i> </a>
+          </div>
+
+          <div class="info-box container d-flex justify-content-center align-items-center" style="margin-top: -40px">
+            <div class="bg-white rounded-pill shadow d-flex align-items-center px-4 py-2" style="min-width: 800px">
+              <!-- City Street -->
+              <div class="px-3">
+                <small class="text-muted">Visited</small><br />
+                <strong>12300 people</strong>
+              </div>
+
+              <!-- Divider -->
+              <div class="vr mx-2"></div>
+
+              <!-- Tipology -->
+              <div class="px-3">
+                <small class="text-muted">Share</small><br />
+                <strong>2345</strong>
+              </div>
+
+              <!-- Divider -->
+              <div class="vr mx-2"></div>
+
+              <!-- Price -->
+              <div class="px-3">
+                <small class="text-muted">testimonial</small><br />
+                <div class="avatar-stack">
+                  <span class="avatar">+6</span>
+                  <img class="avatar" src="/images/avatar/1.jpg" />
+                  <img class="avatar" src="/images/avatar/2.jpg" />
+                  <img class="avatar" src="/images/avatar/4.jpg" />
+                  <img class="avatar" src="/images/avatar/5.jpg" />
+                </div>
+              </div>
+
+              <!-- Search Button -->
+              <div class="ms-auto">
+                <button class="btn btn-dark rounded-pill px-4 py-2">🔍 Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Hero Section End -->
+
+      <!-- Detail Start -->
+
+      <section class="py-5">
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- Judul -->
+            <div class="col-md-6 mb-4 mb-md-0">
+              <h2 class="fw-bold">
+                Rencanakan Liburanmu <br />
+                <span class="highlight">Dengan Sempurnaa</span>
+              </h2>
+            </div>
+
+            <!-- Deskripsi -->
+            <div class="col-md-6">
+              <p class="text-muted">
+                Rencanakan liburan sempurna Anda bersama kami dan temukan pengalaman wisata yang tak terlupakan! Mulai dari destinasi populer hingga tempat tersembunyi yang menawan, kami siap membantu Anda menyusun perjalanan impian dengan
+                mudah dan nyaman. Nikmati akomodasi terbaik, pilihan aktivitas seru, serta layanan profesional yang memastikan setiap momen liburan Anda penuh kesan dan kebahagiaan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Detail End -->
+
+      <!-- Galery Start -->
+
+      <div class="container py-5" id="galeri">
+        <div class="row g-4">
+          <!-- Kartu Properti Besar -->
+          <div class="col-md-6">
+            <div class="property-card position-relative d-flex justify-content-center align-items-center">
+              <img src="./assets/pusatlaut2.jpg" alt="Property Image" class="img-fluid w-100" />
+              <div class="property-price">
+                <div>$930,000</div>
+                <div class="text-muted small">Pusat Laut, Kab. Donggala, Sulawesi Tengah</div>
+                <div class="property-details mt-2">
+                  <span>Area Camp</span>
+                  <span>2 Bath</span>
+                  <span>Sunset</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kartu Galeri 4 Gambar -->
+          <div class="col-md-6">
+            <div class="img-grid">
+              <img src="./assets/paralayangsalena.jpeg" alt="Image 1" />
+              <img src="./assets/pulau sombori.png" alt="Image 2" />
+              <img src="./assets/pusat laut.jpg" alt="Image 3" />
+              <img src="./assets/paisupok3.jpg" alt="Image 4" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Galery End -->
+
+      <!-- Carousel Start -->
+      <!-- <div id="carouselExampleInterval" class="carousel slide mx-5 mb-3" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img class="d-block w-100 rounded" src="./assets/air-terjun-saluopa.jpeg" alt="frog" />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img class="d-block w-100 rounded" src="./assets/paisupok1.webp" alt="frog" />
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 rounded" src="./assets/tambing.jpg" alt="frog" />
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div> -->
+      <!-- Carousel End -->
+
+      <!-- Profile Section -->
+      <div class="card mx-5" id="tentang">
+        <div class="row g-0 align-items-stretch">
+          <div class="col-md-4 h-100">
+            <img src="./assets/matantimali.jpg" class="img-fluid rounded-start h-100 object-fit-cover" />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title mb-5 fs-3 fw-bold">Tentang Kami</h5>
+              <p class="card-text">
+                Didirikan dengan semangat untuk menghubungkan orang dengan properti impian mereka dan destinasi terbaik untuk berlibur, kami hadir sebagai solusi lengkap bagi Anda yang mencari hunian nyaman, villa mewah, atau tempat liburan
+                yang memikat. Dengan tim profesional yang berdedikasi, kami menawarkan layanan personal yang ramah dan terpercaya. Kami percaya bahwa setiap orang berhak merasakan kenyamanan, keindahan, dan ketenangan – baik untuk tinggal
+                maupun sekadar berlibur.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- showcase start -->
+
+      <div class="container">
+        <div class="header">
+          <h1>Property Showcase</h1>
+          <div class="input-group mb-4">
+            <div class="input-group-prepend">
+              <select class="custom-select">
+                <option selected>Buy</option>
+                <option value="1">Rent</option>
+                <option value="2">Sold</option>
+              </select>
+            </div>
+            <input type="text" class="form-control" placeholder="Enter City or Area" />
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button">Search</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card property-card">
+              <img src="./assets/paisupok1.webp" class="card-img-top" alt="Property 1" />
+              <div class="property-info">
+                <h5>Luwuk, Sulawesi Tengah</h5>
+                <p>2342 visited | 20+ Testimoni | 230 Likes</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card property-card">
+              <img src="./assets/matantimali.jpg" class="card-img-top" alt="Property 2" />
+              <div class="property-info">
+                <h5>San Francisco, CA</h5>
+                <p>456 visited | 10+ Testimoni | 130 Likes</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card property-card">
+              <img src="./assets/paisupok3.jpg" class="card-img-top" alt="Property 3" />
+              <div class="property-info">
+                <h5>Boston, MA</h5>
+                <p>3456 visited | 50+ Testimoni | 330 Likes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- showcase end -->
+    </div>
+    <footer class="text-center bg-body-tertiary" id="showcase">
+      <!-- Grid container -->
+      <div class="container pt-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+
+          <!-- Twitter -->
+          <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+
+          <!-- Google -->
+          <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+
+          <!-- Instagram -->
+          <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+          <!-- Linkedin -->
+          <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+          <!-- Github -->
+          <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05)">
+        © 2020 Copyright:
+        <a class="text-body" href="https://www.instagram.com/sisforst/">Information System C</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
